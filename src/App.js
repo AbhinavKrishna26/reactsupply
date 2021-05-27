@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-
+import ResponsiveDrawer from './Navbar'
+import CustomizedInputBase from './Search'
+import MapContainer from './map'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <CustomizedInputBase/>
+
+      <div className="flex-container">
+        <div className="Flex-Left">  
+      <h3>Item Name:</h3>
+      <h3>Transaction ID:</h3>
+      <h3>Item Details:</h3>
+        </div>
+    <div className="Flex-Right">  <MapContainer/></div>
+      </div>
+    
+      <ResponsiveDrawer/>
     </div>
   );
 }
